@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="column is-4 is-offset-4">
+    <h3 class="title">New post</h3>
+<div class="box">
+    <div class="text-center">
+        {% for cat, msg in get_flashed_messages(True) %}
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-{{cat}}">{{msg}}</li>
+        </ul>
+        {%endfor %}
+        {% from "_render_field.html" import render_field %}
+        <form action="{{url_for('create_post')}}" method="post" novalidate>
+            {{ form.hidden_tag() }}
+            {{ render_field(form.post_title) }}
+            {{ render_field(form.post_body) }}
+            <p>{{ form.submit(class='button is-block is-info is-large is-fullwidth') }}</p>
+        </form>
+
+    </div>
+</div>
+</div>
+{% endblock %}

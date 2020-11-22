@@ -1,0 +1,36 @@
+h1 {
+    text-align: center;
+}
+.blocks {
+    display: flex;
+    justify-content: center;
+}
+.img-border {
+    border: 2px solid #ddd;
+    padding: 5px;
+    border-radius: 8px;
+}
+#my_photo {
+    width: 300px;
+}
+#bio-link {
+    margin-right: 10px;
+}
+.blocks a {
+    font-size:20px;
+}
+#timeline {
+    font-size: 20px;
+}
+#timeline li:nth-child(even) {
+    color: crimson;
+}
+#timeline li:nth-child(odd) {
+    color: darkblue;
+}
+#music-img {
+    width: 500px;
+}
+#coding-img {
+    width: 500px;
+}

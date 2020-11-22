@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='/styles/style.css') }}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+    </head>
+    <body>
+        <section class="hero is-primary is-fullheight">
+            <div class="hero-head">
+                <nav class="navbar">
+                    <div class="container">
+                        <div id="navbarMenuHeroA" class="navbar-menu">
+                            <div class="navbar-end">
+                                {% if current_user.is_anonymous %}
+                                <a href="{{ url_for('login') }}" class="navbar-item">Login</a>
+                                {% else %}
+                                <a href="{{ url_for('logout') }}" class="navbar-item">Logout</a>
+                                <a href="{{ url_for('account') }}" class="navbar-item">Account</a>
+                                <a href="{{ url_for('show_main_page') }}" class="navbar-item">Main page</a>
+                                <a href="{{ url_for('create_post') }}" class="navbar-item">Create new post</a>
+                                {% endif %}
+                                 <a href="{{ url_for('posts') }}" class="navbar-item">Posts</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+                {% for cat, msg in get_flashed_messages(True) %}
+                {% if msg %}
+                <div class="notification is-danger">
+                    {{ msg }}
+                </div>
+                {% endif %}
+                {%endfor %}
+                {% block content %}{% endblock %}
+        </section>
+    </body>
+</html>
