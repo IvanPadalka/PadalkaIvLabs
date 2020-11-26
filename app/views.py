@@ -9,6 +9,8 @@ import secrets
 from PIL import Image
 from datetime import datetime
 
+ROWS_PER_PAGE = 3
+
 @app.route('/')
 @app.route('/index')
 def show_main_page():
@@ -64,8 +66,15 @@ def login():
 @app.route('/posts', methods=['GET'])
 @login_required
 def posts():
-    posts = Post.query.all()
-    return render_template('posts.html', posts=posts)
+    q = request.args.get('q')
+    page = request.args.get('page', 1, type=int)
+    if q:
+        posts = Post.query.filter(Post.title.contains(q) | Post.body.contains(q))
+    else:
+        posts = Post.query.order_by(Post.timestamp.desc())
+
+    pages = posts.paginate(page=page, per_page=ROWS_PER_PAGE)
+    return render_template('posts.html', posts=posts, pages=pages, q=q)
 
 @app.route('/post/<int:id>')
 def post(id):

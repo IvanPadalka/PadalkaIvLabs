@@ -16,7 +16,7 @@
             {{ render_field(form.post_title) }}
             {{ render_field(form.post_body) }}
             <p>{{ form.submit(class='btn btn-primary') }}
-            <a class="btn btn-danger" href="{{url_for('delete_post', id=post.id)}}">Delete</a></p>
+            <a class="btn btn-danger" href="{{url_for('delete_post', id=post.id)}}"  style="color: white;">Delete</a></p>
         </form>
 
     </div>
