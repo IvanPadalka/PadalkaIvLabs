@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Admin Create User{% endblock %}
+{% from "_render_field.html" import render_field %}
+
+{% block content %}
+<div class="column is-4 is-offset-4">
+    <p class="title">Create new user</p>
+<div class="box">
+    <form action="{{ url_for('user_create_admin') }}" method="POST">
+        {{ form.hidden_tag() }}
+            {{ render_field(form.username, placeholder=form.username.label.text)}}
+            {{ render_field(form.email) }}
+            {{ render_field(form.password) }}
+            {{ render_field(form.password2) }}
+                {{ form.admin.label }}
+                {{ form.admin }}
+            {{ form.submit(class_="button is-block is-info is-large is-fullwidth") }}
+    </form>
+</div>
+</div>
+{% endblock %}

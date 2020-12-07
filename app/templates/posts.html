@@ -6,6 +6,12 @@
 
 {% block content %}
 <div class="column is-4 is-offset-4">
+    <form action="{{ url_for('posts') }}" class="form-inline">
+        <div class="form-group mx-sm-3 mb-2">
+            <input type="text" class="form-control" name="q" value="{%if query%}{{query}}{% else %}Weather{% endif %}">
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Search</button>
+    </form>
    <div class="box">
         <div class="text-center">
             {% for post in pages.items %}
@@ -24,8 +30,8 @@
 
             <div class="text-right">
             <a href="{{ url_for('posts', page=pages.prev_num, q=q) }}"
-               class="btn btn-outline-dark
-       {% if pages.page == 1 %}disabled{% endif %}">
+               class="btn btn-outline-dark"
+                    {% if pages.page == 1 %}disabled{% endif %}>
                 &laquo;
             </a>
 
@@ -33,7 +39,7 @@
             {% if page_num %}
             {% if pages.page == page_num %}
             <a href="{{ url_for('posts', page=page_num, q=q) }}"
-               class="btn btn-primary">
+               class="btn btn-primary" style="color: white;">
                 {{ page_num }}
             </a>
             {% else %}

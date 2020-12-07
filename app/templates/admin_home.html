@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Admin Home{% endblock %}
+
+{% block content %}
+    <p class="h1">Welcome to the Admin Demo</p>
+    <p class="h4">Hey admin!!!</p>
+
+    <p><a href="{{ url_for('users_list_admin') }}">List of all users.</a></p>
+    <p><a href="{{ url_for('user_create_admin') }}">Create a new user.</a></p>
+    <p><a href="{{url_for('logout')}}">Click here to logout.</a></p>
+{% endblock %}

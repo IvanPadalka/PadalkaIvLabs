@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Admin Update User{% endblock %}
+{% from "_render_field.html" import render_field %}
+
+{% block content %}
+<div class="column is-4 is-offset-4">
+    <p class="title">Update User {{ user.username }}</p>
+<div class="box">
+    <form action="{{ url_for('user_update_admin', user_id=user.id) }}" method="POST">
+        {{ form.hidden_tag() }}
+            {{ render_field(form.username, placeholder=form.username.label.text)}}
+            {{ render_field(form.email) }}
+                {{ form.admin.label }}
+                {{ form.admin}}
+            {{ form.submit(class_="button is-block is-info is-large is-fullwidth") }}
+
+    </form>
+</div>
+</div>
+{% endblock %}
+

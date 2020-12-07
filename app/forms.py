@@ -78,3 +78,21 @@ class PostEditingForm(FlaskForm):
     post_title = StringField('Post title', validators=[DataRequired()])
     post_body = TextAreaField('Post body', render_kw={'rows': 5},  validators=[DataRequired()])
     submit = SubmitField('Edit')
+
+
+class AdminUserCreateForm(RegistrationForm):
+    admin = BooleanField('Admin permission', default="checked")
+    submit = SubmitField('Add')
+
+
+class AdminUserUpdateForm(FlaskForm):
+    username = StringField('Username', validators=[Length(min=4, max=25,
+                                              message='This field length must be between 4 and 25 characters'),
+                                              DataRequired('This field is required'),
+                                              Regexp('^[A-Za-z][A-Za-z0-9_.]*$', 0,
+                                              'Username must have only '
+                                              'letters, numbers, dots or '
+                                              'underscores')])
+    email = StringField('Email', validators=[DataRequired(), Email()])
+    admin = BooleanField('Admin permission', default="checked")
+    submit = SubmitField('Update')

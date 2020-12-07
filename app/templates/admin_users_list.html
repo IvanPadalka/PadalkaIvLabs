@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Admin Users{% endblock %}
+
+{% block content %}
+<div class="column is-4 is-offset-4">
+    <p class="title">Users list</p>
+    <div class="box">
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th >ID</th>
+                <th >Username</th>
+                <th>Admin permission</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for user in users %}
+                <tr>
+                    <th >{{ user.id }}</th>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.admin }}</td>
+                    <td><button class="btn btn-outline-success"><a id="update-link" href="{{ url_for('user_update_admin', user_id=user.id) }}">Update</button></a></td>
+                    <td><button class="btn btn-outline-danger"><a id="delete-link" href="{{ url_for('user_delete_admin', user_id=user.id) }}">Delete</button></a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+</div>
+{% endblock %}
