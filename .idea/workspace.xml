@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="28bf0606-57eb-440c-9e9b-4295e7b610ae" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/app.db" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,12 +23,13 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\padalka_iv\Desktop\PadalkaIvLabs\app\templates" />
-      <recent name="C:\Users\padalka_iv\Desktop\PadalkaIvLabs\app" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\padalka_iv\Desktop\PadalkaIvLabs\app\templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\padalka_iv\Desktop\PadalkaIvLabs" />
+      <recent name="C:\Users\padalka_iv\Desktop\PadalkaIvLabs\app\templates" />
+      <recent name="C:\Users\padalka_iv\Desktop\PadalkaIvLabs\app" />
     </key>
   </component>
   <component name="RunDashboard">
