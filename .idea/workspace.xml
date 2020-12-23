@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28bf0606-57eb-440c-9e9b-4295e7b610ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/modelviews.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/admin_create_user.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/admin_home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/admin_update_user.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/admin_users_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/versions/ab4f01ad7801_11_migration.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/app.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/posts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +20,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../microbio" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
